@@ -28,7 +28,7 @@ int main()
     string salto ="----";
 
     cout<<"INTRODUCE TAMAÑO DEL TABLERO (x*x=par)"<<endl;
-    cout<<"Filas = "; cin >> nFilas; cout << " Columnas = "; cin >> nColumnas;
+    cout<<"Filas = "; cin >> nFilas; cout << "Columnas = "; cin >> nColumnas;
 
     while( (nFilas*nColumnas)%2 != 0 ){
         cout<<"INTRODUCE TAMAÑO DEL TABLERO (x*x=par) = ";
