@@ -4,23 +4,13 @@
 #include <ctime>
 using namespace std;
 
-int nFilas, nColumnas;
-
-void datosInicio(){
-
- 
-}
-
-void desordenar(int *cartas, int filas, int columnas){
-
-    
-}
 
 int main()
 {
 
  srand(time(NULL));
 
+    int nFilas, nColumnas;
     int num=0;
     int columna =1;
     int fila = 1;
@@ -32,7 +22,7 @@ int main()
 
     while( (nFilas*nColumnas)%2 != 0 ){
         cout<<"INTRODUCE TAMAÑO DEL TABLERO (x*x=par) = ";
-        cout<<"Filas = "; cin >> nFilas; cout << "Columnas = "; cin >> nColumnas;
+        cout<<"Filas = "; cin >> nFilas; cout << " Columnas = "; cin >> nColumnas;
     }
 
  //Tablero inicial
@@ -71,11 +61,45 @@ int main()
     }
 
     
-cout<<endl<<"COMPROBACION PAREJAS"<<endl;
+cout<<endl<<"COMPROBACION PAREJAS"<<endl;   //
     for(int i=0;i<(nFilas*nColumnas);i++){
         cout<<cartas[i];
     }
-  
+    cout<<endl<<endl;
+
+cout<< "rands"<<endl;   //
+    int x;
+    for(int i=0; i<(nFilas*nColumnas); i++){
+        int aleatorio = rand() % (nFilas*nColumnas);
+cout << aleatorio << "-";   //
+        x = cartas[aleatorio];
+        cartas[aleatorio] = cartas[i];
+        cartas[i] = x;
+    }
+
+
+cout<<endl<<"COMPROBACION PAREJAS aleatorias "<<endl; //
+    for(int i=0;i<(nFilas*nColumnas);i++){
+        cout<<cartas[i];
+    }
+
+ // Matriz
+    int matriz[nFilas][nColumnas];
+    int indCartas = 0;
+    for(int i=0; i<nFilas; i++){
+        for(int j=0; j<nColumnas; j++){
+            matriz[i][j] = cartas[indCartas];
+            indCartas++;
+        }
+    }
+
+cout<<endl<<endl<<"COMPROBACION PASO A MATRIZ"<<endl; //
+ for(int i=0; i<nFilas; i++){
+        for(int j=0; j<nColumnas; j++){
+            cout<<matriz[i][j];
+        }
+        cout<<endl;
+    }
 
 
 
@@ -85,7 +109,7 @@ cout<<endl<<"COMPROBACION PAREJAS"<<endl;
 
  // FIN DEL PROGRAMA
  cout<<endl<<endl;
- int salida;
- cin >> salida;
+ int fin;
+ cin >> fin;
  return 0;
 }
