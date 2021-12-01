@@ -32,7 +32,7 @@ int main()
 
     while( (nFilas*nColumnas)%2 != 0 ){
         cout<<"INTRODUCE TAMAÑO DEL TABLERO (x*x=par) = ";
-        cout<<"Filas = "; cin >> nFilas; cout << " Columnas = "; cin >> nColumnas;
+        cout<<"Filas = "; cin >> nFilas; cout << "Columnas = "; cin >> nColumnas;
     }
 
  //Tablero inicial
